@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body,html{background:#000;height:100%;margin:0;overflow:hidden}[data-bespoke-marp-fragment=inactive]{visibility:hidden}.bespoke-marp-osc{display:none;opacity:0}.bespoke-marp-parent{bottom:0;left:0;position:absolute;right:0;top:0}.bespoke-marp-parent>.bespoke-marp-osc{background:rgba(0,0,0,.65);border-radius:7px;bottom:50px;color:#fff;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;white-space:nowrap;z-index:1}.bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}.bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}.bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}.bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}.bespoke-marp-parent>.bespoke-marp-osc>button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background-color:transparent;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}.bespoke-marp-parent>.bespoke-marp-osc>button:disabled{cursor:not-allowed;opacity:.15!important}.bespoke-marp-parent>.bespoke-marp-osc>button:hover{opacity:1}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:active{opacity:.6}.bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled){transition:none}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTBMMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMzIgOTBsNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQwIDcwSDIwVjUwbTIwIDBMMjAgNzBtNDAtNDBoMjB2MjBtLTIwIDBsMjAtMjAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;height:32px;overflow:hidden;text-indent:100%;white-space:nowrap;width:32px}.bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen].exit{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IGNsYXNzPSJhIiB4PSIxMCIgeT0iMjAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgcng9IjUuNjciLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIwIDUwaDIwdjIwbS0yMCAwbDIwLTIwbTQwIDBINjBWMzBtMjAgMEw2MCA1MCIvPjwvc3ZnPg==")}.bespoke-marp-parent.bespoke-marp-inactive{cursor:none}.bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}svg.bespoke-marp-slide{height:100%;left:0;pointer-events:none;position:absolute;top:0;width:100%;z-index:-1}svg.bespoke-marp-slide.bespoke-marp-active{pointer-events:auto;z-index:0}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}.bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}.bespoke-progress-parent+.bespoke-marp-parent{top:5px}.bespoke-progress-parent .bespoke-progress-bar{flex:0 0 0;background:#0288d1;transition:flex-basis .2s cubic-bezier(0,1,1,1)}}@media print{.bespoke-marp-osc,.bespoke-progress-parent{display:none!important;transition:none!important}.bespoke-marp-parent{top:0}}</style><style>div#p>svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}div#p>svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#p>svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */div#p>svg>foreignObject>section h1{font-size:2em;margin:0.67em 0}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#p>svg>foreignObject>section{page-break-before:always;break-before:page}div#p>svg>foreignObject>section,div#p>svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;color-adjust:exact!important}div#p>svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{display:block;height:auto;width:100%}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{position:static}}div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{content:""}@supports (-ms-ime-align:auto){div#p>svg>foreignObject>section svg[data-marp-fitting=svg].__reflow__{position:relative}}div#p>svg>foreignObject>section [data-marp-fitting-svg-content]{display:table;white-space:nowrap}div#p>svg>foreignObject>section [data-marp-fitting-svg-content-wrap]{white-space:pre}div#p>svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+/*!
+ * Marp / Marpit Uncover theme
+ *
+ * @theme uncover
+ * @author Yuki Hattori
+ *
+ * @auto-scaling fittingHeader,math
+ * @size 4:3 960px 720px
+ */div#p>svg>foreignObject>section{display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;flex-wrap:nowrap;font-size:40px;height:720px;justify-content:center;letter-spacing:3px;line-height:1.4;padding:30px 70px;position:relative;text-align:center;width:1280px;z-index:0;background:#fdfcff;color:#202228}div#p>svg>foreignObject>section:after{align-items:flex-end;display:flex;font-size:.6em;height:80px;justify-content:flex-end;padding:30px;text-align:right;width:80px;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1 1" width="1" height="1"><path d="M0 1h1v-1Z" fill="rgba(32, 34, 40, 0.05)"/></svg>') no-repeat 50%;background-size:cover;color:#202228;text-shadow:0 0 5px #fdfcff}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section pre{background:#f2f1f4;color:#202228}div#p>svg>foreignObject>section a{color:#009dd5}div#p>svg>foreignObject>section a:hover{color:#087eaa}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{color:#33b1dd}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{color:rgba(32,34,40,.4);text-shadow:0 1px 0 rgba(253,252,255,.8)}div#p>svg>foreignObject>section mark{color:#009dd5;background:transparent}div#p>svg>foreignObject>section:not(.invert) .hljs{display:block;overflow-x:auto;padding:.5em;background:#fff}div#p>svg>foreignObject>section:not(.invert) .hljs,div#p>svg>foreignObject>section:not(.invert) .hljs-subst{color:#000}div#p>svg>foreignObject>section:not(.invert) .hljs-addition,div#p>svg>foreignObject>section:not(.invert) .hljs-meta,div#p>svg>foreignObject>section:not(.invert) .hljs-string,div#p>svg>foreignObject>section:not(.invert) .hljs-symbol,div#p>svg>foreignObject>section:not(.invert) .hljs-template-tag,div#p>svg>foreignObject>section:not(.invert) .hljs-template-variable{color:#756bb1}div#p>svg>foreignObject>section:not(.invert) .hljs-comment,div#p>svg>foreignObject>section:not(.invert) .hljs-quote{color:#636363}div#p>svg>foreignObject>section:not(.invert) .hljs-bullet,div#p>svg>foreignObject>section:not(.invert) .hljs-link,div#p>svg>foreignObject>section:not(.invert) .hljs-literal,div#p>svg>foreignObject>section:not(.invert) .hljs-number,div#p>svg>foreignObject>section:not(.invert) .hljs-regexp{color:#31a354}div#p>svg>foreignObject>section:not(.invert) .hljs-deletion,div#p>svg>foreignObject>section:not(.invert) .hljs-variable{color:#88f}div#p>svg>foreignObject>section:not(.invert) .hljs-built_in,div#p>svg>foreignObject>section:not(.invert) .hljs-doctag,div#p>svg>foreignObject>section:not(.invert) .hljs-keyword,div#p>svg>foreignObject>section:not(.invert) .hljs-name,div#p>svg>foreignObject>section:not(.invert) .hljs-section,div#p>svg>foreignObject>section:not(.invert) .hljs-selector-class,div#p>svg>foreignObject>section:not(.invert) .hljs-selector-id,div#p>svg>foreignObject>section:not(.invert) .hljs-selector-tag,div#p>svg>foreignObject>section:not(.invert) .hljs-strong,div#p>svg>foreignObject>section:not(.invert) .hljs-tag,div#p>svg>foreignObject>section:not(.invert) .hljs-title,div#p>svg>foreignObject>section:not(.invert) .hljs-type{color:#3182bd}div#p>svg>foreignObject>section:not(.invert) .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section:not(.invert) .hljs-attribute{color:#e6550d}div#p>svg>foreignObject>section.invert{background:#202228;color:#fff}div#p>svg>foreignObject>section.invert:after{background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1 1" width="1" height="1"><path d="M0 1h1v-1Z" fill="rgba(255, 255, 255, 0.05)"/></svg>') no-repeat 50%;background-size:cover;color:#fff;text-shadow:0 0 5px #202228}div#p>svg>foreignObject>section.invert code,div#p>svg>foreignObject>section.invert pre{background:#2b2d33;color:#fff}div#p>svg>foreignObject>section.invert a{color:#60d0f0}div#p>svg>foreignObject>section.invert a:hover{color:#88dcf4}div#p>svg>foreignObject>section.invert h1 strong,div#p>svg>foreignObject>section.invert h2 strong,div#p>svg>foreignObject>section.invert h3 strong,div#p>svg>foreignObject>section.invert h4 strong,div#p>svg>foreignObject>section.invert h5 strong,div#p>svg>foreignObject>section.invert h6 strong{color:#80d9f3}div#p>svg>foreignObject>section.invert footer,div#p>svg>foreignObject>section.invert header{color:hsla(0,0%,100%,.4);text-shadow:0 1px 0 rgba(32,34,40,.8)}div#p>svg>foreignObject>section.invert mark{color:#60d0f0;background:transparent}div#p>svg>foreignObject>section.invert .hljs{display:block;overflow-x:auto;padding:.5em;background:#222;color:#fff}div#p>svg>foreignObject>section.invert .hljs-comment,div#p>svg>foreignObject>section.invert .hljs-quote{color:#777}div#p>svg>foreignObject>section.invert .hljs-built_in,div#p>svg>foreignObject>section.invert .hljs-builtin-name,div#p>svg>foreignObject>section.invert .hljs-bullet,div#p>svg>foreignObject>section.invert .hljs-deletion,div#p>svg>foreignObject>section.invert .hljs-link,div#p>svg>foreignObject>section.invert .hljs-literal,div#p>svg>foreignObject>section.invert .hljs-meta,div#p>svg>foreignObject>section.invert .hljs-number,div#p>svg>foreignObject>section.invert .hljs-params,div#p>svg>foreignObject>section.invert .hljs-regexp,div#p>svg>foreignObject>section.invert .hljs-symbol,div#p>svg>foreignObject>section.invert .hljs-tag,div#p>svg>foreignObject>section.invert .hljs-template-variable,div#p>svg>foreignObject>section.invert .hljs-variable{color:#ab875d}div#p>svg>foreignObject>section.invert .hljs-attribute,div#p>svg>foreignObject>section.invert .hljs-name,div#p>svg>foreignObject>section.invert .hljs-section,div#p>svg>foreignObject>section.invert .hljs-selector-class,div#p>svg>foreignObject>section.invert .hljs-selector-id,div#p>svg>foreignObject>section.invert .hljs-title,div#p>svg>foreignObject>section.invert .hljs-type{color:#9b869b}div#p>svg>foreignObject>section.invert .hljs-addition,div#p>svg>foreignObject>section.invert .hljs-keyword,div#p>svg>foreignObject>section.invert .hljs-selector-tag,div#p>svg>foreignObject>section.invert .hljs-string{color:#8f9c6c}div#p>svg>foreignObject>section.invert .hljs-emphasis{font-style:italic}div#p>svg>foreignObject>section.invert .hljs-strong{font-weight:700}div#p>svg>foreignObject>section>:first-child,div#p>svg>foreignObject>section[data-header]>:nth-child(2){margin-top:0}div#p>svg>foreignObject>section>:last-child,div#p>svg>foreignObject>section[data-footer]>:nth-last-child(2){margin-bottom:0}div#p>svg>foreignObject>section svg[data-marp-fitting=svg]{max-height:660px;--preserve-aspect-ratio:xMidYMid meet}div#p>svg>foreignObject>section blockquote,div#p>svg>foreignObject>section p{margin:0 0 15px}div#p>svg>foreignObject>section h1,div#p>svg>foreignObject>section h2,div#p>svg>foreignObject>section h3,div#p>svg>foreignObject>section h4,div#p>svg>foreignObject>section h5,div#p>svg>foreignObject>section h6{margin:15px 0 30px}div#p>svg>foreignObject>section h1 strong,div#p>svg>foreignObject>section h2 strong,div#p>svg>foreignObject>section h3 strong,div#p>svg>foreignObject>section h4 strong,div#p>svg>foreignObject>section h5 strong,div#p>svg>foreignObject>section h6 strong{font-weight:inherit}div#p>svg>foreignObject>section h1{font-size:2em}div#p>svg>foreignObject>section h2{font-size:1.7em}div#p>svg>foreignObject>section h3{font-size:1.4em;letter-spacing:2px}div#p>svg>foreignObject>section h4{font-size:1.2em;letter-spacing:2px}div#p>svg>foreignObject>section h5{font-size:1em;letter-spacing:1px}div#p>svg>foreignObject>section h6{font-size:.8em;letter-spacing:1px}div#p>svg>foreignObject>section footer,div#p>svg>foreignObject>section header{position:absolute;z-index:1;left:70px;right:70px;font-size:.45em;letter-spacing:1px}div#p>svg>foreignObject>section header{top:30px}div#p>svg>foreignObject>section footer{bottom:30px}div#p>svg>foreignObject>section a{text-decoration:none}div#p>svg>foreignObject>section a:hover{text-decoration:underline}div#p>svg>foreignObject>section ol,div#p>svg>foreignObject>section ul{margin:0 auto;text-align:left}div#p>svg>foreignObject>section>ol,div#p>svg>foreignObject>section>ul{margin-bottom:15px}div#p>svg>foreignObject>section code,div#p>svg>foreignObject>section pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;letter-spacing:0;margin:-.2em .2em .2em;padding:.2em}div#p>svg>foreignObject>section pre{box-shadow:0 4px 8px rgba(0,0,0,.2);font-size:70%;line-height:1.15;margin:15px auto 30px;min-width:40%;padding:.4em .6em;text-align:left}div#p>svg>foreignObject>section pre>code{margin:0;padding:0}div#p>svg>foreignObject>section table{border-collapse:collapse;margin:0 auto 15px}div#p>svg>foreignObject>section table>tbody>tr>td,div#p>svg>foreignObject>section table>tbody>tr>th,div#p>svg>foreignObject>section table>thead>tr>td,div#p>svg>foreignObject>section table>thead>tr>th{padding:.15em .5em}div#p>svg>foreignObject>section table>thead>tr>td,div#p>svg>foreignObject>section table>thead>tr>th{border-bottom:3px solid}div#p>svg>foreignObject>section table>tbody>tr:not(:last-child)>td,div#p>svg>foreignObject>section table>tbody>tr:not(:last-child)>th{border-bottom:1px solid}div#p>svg>foreignObject>section blockquote{font-size:90%;line-height:1.3;padding:0 2em;position:relative;z-index:0}div#p>svg>foreignObject>section blockquote:after,div#p>svg>foreignObject>section blockquote:before{content:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNDQgMTkuM0wzOC45NCAwQzguMTQgOS41OSAwIDQwLjA1IDAgNTQuODNWMTAwaDQxLjQ3VjU0LjgzaC0yM2MtLjA0LS4yOC4yNS0yNy42NiAyNS41My0zNS41M3ptNTYgMEw5NC45NCAwQzY0LjE0IDkuNTkgNTYgNDAuMDUgNTYgNTQuODNWMTAwaDQxLjQ3VjU0LjgzaC0yM2MtLjA0LS4yOC4yNS0yNy42NiAyNS41My0zNS41M3oiIGZpbGw9IiM4ODgiIG9wYWNpdHk9Ii4zMyIvPjwvc3ZnPg==");height:auto;pointer-events:none;position:absolute;width:1em;z-index:-1}div#p>svg>foreignObject>section blockquote:before{left:0;top:0}div#p>svg>foreignObject>section blockquote:after{bottom:0;right:0;transform:rotate(180deg)}div#p>svg>foreignObject>section blockquote>:last-child{margin-bottom:0}div#p>svg>foreignObject>section[data-marpit-scope-atS5h2Vh] h2{margin-bottom:0}div#p>svg>foreignObject>section[data-marpit-scope-atS5h2Vh] h3{margin-top:0}div#p>svg>foreignObject>section[data-marpit-scope-OicwiITX] li{color:silver}div#p>svg>foreignObject>section[data-marpit-scope-OicwiITX] li:last-child{color:black}div#p>svg>foreignObject>section[data-marpit-scope-2e5P7xY5] ul{list-style-type:none}div#p>svg>foreignObject>section[data-marpit-scope-2e5P7xY5] li{font-size:30px;margin-bottom:30px}div#p>svg>foreignObject>section[data-marpit-scope-J3cOwEPe] li{font-size:30px}div#p>svg>foreignObject>section[data-marpit-scope-KdeVg2Nf] ul{list-style-type:none}div#p>svg>foreignObject>section[data-marpit-scope-KdeVg2Nf] li{font-size:30px}div#p>svg>foreignObject>section[data-marpit-scope-aQrJvtHf] pre{white-space:pre-wrap}div#p>svg>foreignObject>section[data-marpit-scope-gReQGj9L] ul{list-style-type:none}div#p>svg>foreignObject>section[data-marpit-scope-gReQGj9L] li{font-size:30px}div#p>svg>foreignObject>section[data-marpit-scope-UrJAr8JN] pre{white-space:pre-wrap}div#p>svg>foreignObject>section[data-marpit-scope-sB5LwN6r] li{color:silver}div#p>svg>foreignObject>section[data-marpit-scope-sB5LwN6r] li li:last-child{color:black}div#p>svg>foreignObject>section[data-marpit-scope-sB5LwN6r] li li:nth-last-child(2){color:black}div#p>svg>foreignObject>section[data-marpit-scope-LAyRGTfn] pre{white-space:pre-wrap}div#p>svg>foreignObject>section[data-marpit-scope-bXceaXhs] pre{white-space:pre-wrap;font-size:24px}div#p>svg>foreignObject>section[data-marpit-scope-O9sHl14e] li{font-size:35px}div#p>svg>foreignObject>section[data-marpit-scope-Up3EhFtE] pre{white-space:pre-wrap;font-size:24px}div#p>svg>foreignObject>section[data-marpit-scope-zATlDbN8] pre{white-space:pre-wrap;font-size:24px}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]{display:block!important;padding:0!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=background]:before,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:after,div#p>svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}div#p>svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#p>svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#p>svg>foreignObject>section[data-marpit-advanced-background=content],div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}div#p>svg>foreignObject>section[data-marpit-advanced-background=pseudo],div#p>svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}div#p>svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button></div><div id="p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-marpit-scope-atS5h2Vh="" data-theme="uncover" style="--theme:uncover;">
+<h2>Sansan アプリで学ぶ iOS 13 対応</h2>
+<h3>After iOSDC JAPAN 2019</h3>
+<p>Sansan 株式会社 Sansan 事業部 プロダクト開発部<br />
+中川 泰夫</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;ingroduction.jpeg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="2" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:50%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1>自己紹介</h1>
+<ul>
+<li>iOSDC で Sansan ブースでキーボードの質問していたおじさん</li>
+</ul>
+<p><img src="Twitter.png" alt="h:320" style="height:320px;" /></p>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-theme="uncover" style="--theme:uncover;">
+<h1>アジェンダ</h1>
+<ol>
+<li>何故やるのか？</li>
+<li>Sansan アプリを iOS 13 上で実行出来るようになるまでに起こった問題</li>
+<li>Sansan アプリを iOS 13 上で実行出来るようになった後に起こった問題</li>
+<li>まとめ</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-theme="uncover" style="--theme:uncover;">
+<h1>何故やるのか？</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-theme="uncover" style="--theme:uncover;">
+<h1>何故やるのか？</h1>
+<p><img src="Submit_Your_iOS_Apps_to_the_App_Store_-_News_-_Apple%20Developer.png" alt="" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-theme="uncover" style="--theme:uncover;">
+<h1>何故やるのか？</h1>
+<p>Starting April 2020, all new app updates will neet to be built with the iOS 13 SDK and support the all-screen design of iPhone Xs Max or later.<br />
+(2020年4月以降、新規Appと、AppのアップデートのすべてをiOS 13 SDKでビルドし、iPhone XS Max以降のオールスクリーンデザインをサポートする必要があります。)</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-theme="uncover" style="--theme:uncover;">
+<h3>Sansan アプリを iOS 13 上で実行出来るようになるまでに起こった問題</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-theme="uncover" style="--theme:uncover;">
+<h1>iOS 13 SDK 対応に向けて</h1>
+<ol>
+<li>macOS Catalina Beta にアップデート</li>
+<li>Xcode 11 をダウンロード</li>
+<li>iOS 13 SDK でビルドしてみる</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-marpit-scope-OicwiITX="" data-theme="uncover" style="--theme:uncover;">
+<h1>iOS 13 SDK 対応に向けて</h1>
+<ol>
+<li>macOS Catalina Beta にアップデート</li>
+<li>Xcode 11 をダウンロード</li>
+<li>iOS 13 SDK でビルドしてみる</li>
+</ol>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-theme="uncover" style="--theme:uncover;">
+<h1>iOS 13 SDK でビルドしてみる</h1>
+<h1>⌘+B</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-theme="uncover" style="--theme:uncover;">
+<h1>iOS 13 SDK でビルドしてみる</h1>
+<p><img src="Build_Failed.png" alt="" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-theme="uncover" style="--theme:uncover;">
+<h1>iOS 13 SDK でビルドしてみる</h1>
+<p><img class="emoji" draggable="false" alt="❌" src="https://twemoji.maxcdn.com/2/svg/274c.svg" data-marp-twemoji=""/> Module compiled with Swift 5.0 cannot be imported by the Swift 5.1 compiler:</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-theme="uncover" style="--theme:uncover;">
+<h5>Swift 5.0 でコンパイル済みのモジュールを import できない</h5>
+<ul>
+<li>Sansan アプリでは Carthage でビルド済みバイナリを<br />
+コード管理することでビルド時間の短縮をしていた</li>
+<li>以前にコンパイルしたのは Swift 5.0 対応時</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-marpit-scope-2e5P7xY5="" data-theme="uncover" style="--theme:uncover;">
+<h5>Swift 5.0 でコンパイル済みのモジュールを import できない</h5>
+
+<ul>
+<li><img class="emoji" draggable="false" alt="💲" src="https://twemoji.maxcdn.com/2/svg/1f4b2.svg" data-marp-twemoji=""/> <code>sudo xcode-select --switch /Applications/Xcode_11.app/Contents/Developer</code></li>
+<li><img class="emoji" draggable="false" alt="💲" src="https://twemoji.maxcdn.com/2/svg/1f4b2.svg" data-marp-twemoji=""/> <code>carthage update --platform iOS --no-use-binaries</code></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-theme="uncover" style="--theme:uncover;">
+<h5>Swift 5.0 でコンパイル済みのモジュールを import できない</h5>
+<p><img class="emoji" draggable="false" alt="❌" src="https://twemoji.maxcdn.com/2/svg/274c.svg" data-marp-twemoji=""/> *** Building scheme &quot;XLActionController&quot; in XLActionController.xcworkspace<br />
+Build Failed</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-scope-J3cOwEPe="" data-theme="uncover" style="--theme:uncover;">
+<h5>XLActionController が Swift 5.1 でコンパイルできない</h5>
+
+<ul>
+<li>ビルドログを見ると、 <code>/XLActionController/Resource/ActionCell.xib</code> が<br />
+コンパイル出来ていない模様</li>
+<li>master ブランチに対して Xcode 11 beta 5 でビルドできるようにする<br />
+修正の PR がマージ済み
+<ul>
+<li><a href="https://github.com/xmartlabs/XLActionController/pull/123">https://github.com/xmartlabs/XLActionController/pull/123</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-theme="uncover" style="--theme:uncover;">
+<h5>XLActionController が Swift 5.1 でコンパイルできない</h5>
+<pre><code class="language-diff">Cartfile
+<span class="hljs-comment">---</span>
+<span class="hljs-deletion">- github "xmartlabs/XLActionController" == 5.0.0</span>
+<span class="hljs-addition">+ github "xmartlabs/XLActionController" "master"</span>
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-marpit-scope-KdeVg2Nf="" data-theme="uncover" style="--theme:uncover;">
+<h5>XLActionController が Swift 5.1 でコンパイルできない</h5>
+
+<ul>
+<li><img class="emoji" draggable="false" alt="💲" src="https://twemoji.maxcdn.com/2/svg/1f4b2.svg" data-marp-twemoji=""/> <code>carthage update --platform iOS --no-use-binaries</code></li>
+</ul>
+<h3><img class="emoji" draggable="false" alt="✅" src="https://twemoji.maxcdn.com/2/svg/2705.svg" data-marp-twemoji=""/> Build Succeeded</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-theme="uncover" style="--theme:uncover;">
+<h5>Swift 5.0 でコンパイル済みのモジュールを import できない</h5>
+<h1>⌘+B</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-theme="uncover" style="--theme:uncover;">
+<h5>Swift 5.0 でコンパイル済みのモジュールを import できない</h5>
+<p><img src="Build_Succeeded.png" alt="" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-theme="uncover" style="--theme:uncover;">
+<h4>アプリを動かしてみる on iOS SDK 13</h4>
+<h1>⌘+R</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-theme="uncover" style="--theme:uncover;">
+<h4>アプリを動かしてみる on iOS SDK 13</h4>
+<p><img src="RLMException.png" alt="h:580" style="height:580px;" /></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-marpit-scope-aQrJvtHf="" data-theme="uncover" style="--theme:uncover;">
+<h4>アプリを動かしてみる on iOS SDK 13</h4>
+<pre><code><span class="hljs-number">2019</span>-<span class="hljs-number">09</span>-<span class="hljs-number">22</span> <span class="hljs-number">17</span>:<span class="hljs-number">26</span>:<span class="hljs-number">41.737974</span>+<span class="hljs-number">0900</span> Sansan[<span class="hljs-number">32738</span>:<span class="hljs-number">933703</span>] *** Terminating app due to uncaught exception <span class="hljs-string">'RLMException'</span>, reason: <span class="hljs-string">'Primary key property '</span>id<span class="hljs-string">' does not exist on object '</span>Use<span class="hljs-string">r''</span>
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-theme="uncover" style="--theme:uncover;">
+<h6>Realm のプライマリーキープロパティがオブジェクトに存在しない</h6>
+<ul>
+<li>v3.18.0 にて Xcode 11 での互換性が追加されていた <img class="emoji" draggable="false" alt="🆒" src="https://twemoji.maxcdn.com/2/svg/1f192.svg" data-marp-twemoji=""/>
+<ul>
+<li>コミットログを見るに Swift 5.1 で明示的に String 型のインスタンス変数名が設定されなくなったために、 Primary key property を String 型で定義していた場合にパースできず、例外が発生する模様 (User オブジェクトの id プロパティは String 型だった)</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-marpit-scope-gReQGj9L="" data-theme="uncover" style="--theme:uncover;">
+<h6>Realm のプライマリーキープロパティがオブジェクトに存在しない</h6>
+<pre><code class="language-diff">Cartfile
+<span class="hljs-comment">---</span>
+<span class="hljs-deletion">- github "realm/realm-cocoa" == 3.15.0</span>
+<span class="hljs-addition">+ github "realm/realm-cocoa" == 3.18.0</span>
+</code></pre>
+<ul>
+<li><img class="emoji" draggable="false" alt="💲" src="https://twemoji.maxcdn.com/2/svg/1f4b2.svg" data-marp-twemoji=""/> <code>carthage update  --platform iOS --no-use-binaries</code></li>
+</ul>
+<h3>⌘+R</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;WBS.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="26" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/></h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-theme="uncover" style="--theme:uncover;">
+<h3>Sansan アプリを iOS 13 上で実行出来るようになった後に起こった問題</h3>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;modal_on_modal_first_transition_bug.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="28" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1>Modal on Modal でナビゲーションバーの初回表示がおかしくなる</h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-theme="uncover" style="--theme:uncover;">
+<h6>Modal on Modal でナビゲーションバーの初回表示がおかしくなる</h6>
+<ul>
+<li>初回表示の View Hierarchy を見ると、 UINavigationBar の高さは 56</li>
+<li>しかし、内部の _UIBarBackground や _UINavigationBarContentView の高さは 44</li>
+<li>この両者の差分、 12 が余白となって表示されてしまう</li>
+<li>2 回目以降はすべて 56 で同じ</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-theme="uncover" style="--theme:uncover;">
+<h6>Modal on Modal でナビゲーションバーの初回表示がおかしくなる</h6>
+<ul>
+<li>試してみたのは以下
+<ul>
+<li>UINavigationBar の BarTint と同じ色を Background に設定して、ごまかす
+<ul>
+<li>ナビゲーションバーの影がない場合にしか有効でない</li>
+</ul>
+</li>
+<li>なんとか、初回のみ UINavigationBar の高さを変えられないか？
+<ul>
+<li>カスタムしたナビゲーションバーを準備すれば、行けそうだが、個別の OS 対応のみでそこまで出来ない…</li>
+</ul>
+</li>
+<li>結局、セミモーダルをやめる (従来通り) <img class="emoji" draggable="false" alt="😢" src="https://twemoji.maxcdn.com/2/svg/1f622.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-marpit-scope-UrJAr8JN="" data-theme="uncover" style="--theme:uncover;">
+<h6>Modal on Modal でナビゲーションバーの初回表示がおかしくなる</h6>
+<pre><code class="language-diff"><span class="hljs-deletion">- &lt;segue destination="DhH-aq-dt8" kind="presentation" identifier="ShowWorkingCountry" id="iFe-jJ-NaI"/&gt;</span>
+<span class="hljs-addition">+ &lt;segue destination="DhH-aq-dt8" kind="presentation" identifier="ShowWorkingCountry" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="iFe-jJ-NaI"/&gt;</span>
+</code></pre>
+<p>遷移元も遷移先もセミモーダルをやめると従来の表示と同等に</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;modal_on_modal_first_transition_solution.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="32" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/></h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;login.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="33" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1>ログイン時の遷移アニメーションがおかしい</h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-theme="uncover" style="--theme:uncover;">
+<h3>ログイン時の遷移アニメーションがおかしい</h3>
+<ul>
+<li>検証した感じ、セミモーダル上での push 遷移のアニメーションがイケてない</li>
+<li>出来そうな解決策は 3 つ
+<ul>
+<li>セミモーダル上でも違和感のない push 遷移用のカスタムアニメーションを作る</li>
+<li>セミモーダルをやめる (従来通り) <img class="emoji" draggable="false" alt="😢" src="https://twemoji.maxcdn.com/2/svg/1f622.svg" data-marp-twemoji=""/></li>
+<li>push 遷移のアニメーションを無効にして、セミモーダルの非表示アニメーションを活かす</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-marpit-scope-sB5LwN6r="" data-theme="uncover" style="--theme:uncover;">
+<h3>ログイン時の遷移アニメーションがおかしい</h3>
+
+<ul>
+<li>検証した感じ、セミモーダル上での push 遷移のアニメーションがイケてない</li>
+<li>出来そうな解決策は 3 つ
+<ul>
+<li>セミモーダル上でも違和感のない push 遷移用のカスタムアニメーションを作る</li>
+<li>セミモーダルをやめる (従来通り) <img class="emoji" draggable="false" alt="😢" src="https://twemoji.maxcdn.com/2/svg/1f622.svg" data-marp-twemoji=""/></li>
+<li>push 遷移のアニメーションを無効にして、セミモーダルの非表示アニメーションを活かす</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-theme="uncover" style="--theme:uncover;">
+<h2>セミモーダルをやめる (従来通り)</h2>
+<pre><code class="language-diff">router.viewController.modalTransitionStyle = .crossDissolve
+<span class="hljs-addition">+ router.viewController.modalPresentationStyle = .fullScreen</span>
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;login_fullscreen.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="37" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/></h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-marpit-scope-LAyRGTfn="" data-theme="uncover" style="--theme:uncover;">
+<h5>push 遷移のアニメーションを無効にして、セミモーダルの非表示アニメーションを活かす</h5>
+<pre><code class="language-diff"><span class="hljs-deletion">- &lt;segue destination="wVx-Cm-Up9" kind="show" identifier="PushToMainMenu" id="1DV-k7-ezV"/&gt;</span>
+<span class="hljs-addition">+ &lt;segue destination="wVx-Cm-Up9" kind="show" identifier="PushToMainMenu" animates="NO" id="1DV-k7-ezV"/&gt;</span>
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;login_disable_push_animation.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="39" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1><img class="emoji" draggable="false" alt="🎉" src="https://twemoji.maxcdn.com/2/svg/1f389.svg" data-marp-twemoji=""/></h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;searchbar_inactive_height_constraint.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="40" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h4>UINavigationBar.titleView に UISearchBar を設定した場合に制約が効かなくなった</h4>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-marpit-scope-bXceaXhs="" data-theme="uncover" style="--theme:uncover;">
+<h5>UINavigationBar.titleView に UISearchBar を設定した場合に制約が効かなくなった</h5>
+<p>元々、 iOS 11 で UISearchBar の高さが 56 になり、 UINavigationBar の高さが子ビューに合わせて、 56 になったことに対する対応として、以下のコードがあった</p>
+<pre><code class="language-swift"><span class="hljs-keyword">if</span> #available(iOS <span class="hljs-number">11.0</span>, *) {
+    searchBar.heightAnchor.constraint(equalToConstant: <span class="hljs-number">44</span>).isActive = <span class="hljs-literal">true</span>
+}
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-theme="uncover" style="--theme:uncover;">
+<h5>UINavigationBar.titleView に UISearchBar を設定した場合に制約が効かなくなった</h5>
+<ul>
+<li>iOS 12 までは設定した制約が Intrinsic Content Size より優先されていた</li>
+<li>iOS 13 から設定した制約より Intrinsic Content Size が優先されるようになった</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-marpit-scope-O9sHl14e="" data-theme="uncover" style="--theme:uncover;">
+<h5>UINavigationBar.titleView に UISearchBar を設定した場合に制約が効かなくなった</h5>
+
+<ul>
+<li>色々、試したが以前と同じく 44 を設定できたのは以下の方法
+<ul>
+<li>Intrinsic Content Size が設定されていない UIView でラップ</li>
+<li>UISearchBar の translatesAutoresizingMaskIntoConstraints を false にする</li>
+<li>UINavigationBar.titleView にはラップした UIView を設定</li>
+<li>viewDidLayoutSubviews で制約を設定</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-marpit-scope-Up3EhFtE="" data-theme="uncover" style="--theme:uncover;">
+<h5>UINavigationBar.titleView に UISearchBar を設定した場合に制約が効かなくなった</h5>
+<pre><code class="language-diff">if #available(iOS 11.0, *) {
+    searchBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
+}
+navigationItem.titleView = searchBar
+<span class="hljs-addition">+ if #available(iOS 13.0, *) {</span>
+<span class="hljs-addition">+     searchBar.translatesAutoresizingMaskIntoConstraints = false</span>
+<span class="hljs-addition">+     titleView.addSubview(searchBar)</span>
+<span class="hljs-addition">+     navigationItem.titleView = titleView</span>
+<span class="hljs-addition">+ }</span>
+</code></pre>
+<p>続く</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-marpit-scope-zATlDbN8="" data-theme="uncover" style="--theme:uncover;"><pre><code class="language-diff"><span class="hljs-addition">+ override func viewDidLayoutSubviews() {</span>
+<span class="hljs-addition">+     if #available(iOS 13.0, *) {</span>
+<span class="hljs-addition">+         // 各 UI の幅取得は省略 :bow:</span>
+<span class="hljs-addition">+         let titleViewWidth = navigationBarWidth - (leftBarButtonItemWidth + rightBarButtonItemWidth)</span>
+<span class="hljs-addition">+         titleView.widthAnchor.constraint(equalToConstant: titleViewWidth).isActive = true</span>
+<span class="hljs-addition">+         titleView.heightAnchor.constraint(equalTo: searchBar.heightAnchor).isActive = true</span>
+<span class="hljs-addition">+         titleView.centerYAnchor.constraint(equalTo: searchBar.centerYAnchor).isActive = true</span>
+<span class="hljs-addition">+         titleView.leadingAnchor.constraint(equalTo: searchBar.leadingAnchor).isActive = true</span>
+<span class="hljs-addition">+         titleView.trailingAnchor.constraint(equalTo: searchBar.trailingAnchor).isActive = true</span>
+<span class="hljs-addition">+     }</span>
+<span class="hljs-addition">+ </span>
+<span class="hljs-addition">+     super.viewDidLayoutSubviews()</span>
+<span class="hljs-addition">+ }</span>
+</code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;searchbar_inactive_height_constraint_solution.gif&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="60%" height="720"><section id="46" data-theme="uncover" style="--theme:uncover;--marpit-advanced-background-split:40%;" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h4>UINavigationBar.titleView に UISearchBar を設定した場合に制約が効かなくなった</h4>
+<h1><img class="emoji" draggable="false" alt="👼" src="https://twemoji.maxcdn.com/2/svg/1f47c.svg" data-marp-twemoji=""/> しんどい <img class="emoji" draggable="false" alt="👼" src="https://twemoji.maxcdn.com/2/svg/1f47c.svg" data-marp-twemoji=""/></h1>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-theme="uncover" style="--theme:uncover;">
+<h1>まとめ</h1>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-theme="uncover" style="--theme:uncover;">
+<h1>まとめ</h1>
+<ul>
+<li>iOS 13 SDK でビルドと実行に成功するところまでは以前の iOS 12 SDK のアップデート時とそこまで変わらなかった <img class="emoji" draggable="false" alt="👍" src="https://twemoji.maxcdn.com/2/svg/1f44d.svg" data-marp-twemoji=""/></li>
+<li>実際に iOS 13 SDK でビルドしたアプリを iOS 13 上で動かすと様々な問題が発生した <img class="emoji" draggable="false" alt="😭" src="https://twemoji.maxcdn.com/2/svg/1f62d.svg" data-marp-twemoji=""/>
+<ul>
+<li>すべての画面をテストできたわけではないので、まだあるかも… <img class="emoji" draggable="false" alt="😰" src="https://twemoji.maxcdn.com/2/svg/1f630.svg" data-marp-twemoji=""/></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-theme="uncover" style="--theme:uncover;">
+<h1>Sansan アプリからの学び</h1>
+<ul>
+<li>iOS 13 SDK で変更のあったモーダル遷移をしている箇所とその画面からの遷移先までは一通り確認してみよう</li>
+<li>個別バージョン対応している箇所は SDK のアップデートの影響で動かなくなるかもしれないので、その部分も確認しよう</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-theme="uncover" style="--theme:uncover;" data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;sbb2019_afteriosdc.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="50" data-theme="uncover" style="--theme:uncover;" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg></div><script>!function(){"use strict";const t=()=>"Apple Computer, Inc."===navigator.vendor?[e]:[];function e(t){Array.from(document.getElementsByTagName("svg"),e=>{if(e.hasAttribute("data-marpit-svg")){const{clientHeight:r,clientWidth:a}=e;e.style.transform||(e.style.transform="translateZ(0)");const i=t||e.currentScale||1,n=e.viewBox.baseVal.width/i,s=e.viewBox.baseVal.height/i,o=Math.min(r/s,a/n);Array.from(e.querySelectorAll(":scope > foreignObject"),t=>{const e=t.x.baseVal.value,i=t.y.baseVal.value;Array.from(t.querySelectorAll(":scope > section"),t=>{t.style.transformOrigin||(t.style.transformOrigin="0 0");const l=(a-o*n)/2-e,c=(r-o*s)/2-i;t.style.transform=`translate3d(${l}px,${c}px,0) scale(${o}) translate(${e}px,${i}px)`})})}})}const r="data-marp-fitting",a="data-marp-fitting-code",i="data-marp-fitting-math",n=(t,e,r)=>{if(t.getAttribute(e)!==r)return t.setAttribute(e,r),!0};!function(e=!0){const s=()=>{for(const e of t())e();Array.from(document.querySelectorAll(`svg[${r}="svg"]`),t=>{const e=t.firstChild,r=e.firstChild,{scrollWidth:s,scrollHeight:o}=r;let l,c=1;if(t.hasAttribute(a)&&(l=t.parentElement.parentElement),t.hasAttribute(i)&&(l=t.parentElement),l){const t=getComputedStyle(l),e=Math.ceil(l.clientWidth-parseFloat(t.paddingLeft)-parseFloat(t.paddingRight));e&&(c=e)}const m=Math.max(s,c),p=Math.max(o,1),g=`0 0 ${m} ${p}`;n(e,"width",`${m}`),n(e,"height",`${p}`),n(t,"preserveAspectRatio",getComputedStyle(t).getPropertyValue("--preserve-aspect-ratio")||"xMinYMin meet"),n(t,"viewBox",g)&&t.classList.toggle("__reflow__")}),e&&window.requestAnimationFrame(s)};s()}()}();
+</script><script>!function(){"use strict";var e={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),s=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,(function(e){return"SCRIPT"!==e.nodeName})),a={},o=function(e,t){return(t=t||{}).index=s.indexOf(e),t.slide=e,t},i=function(e,t){a[e]=(a[e]||[]).filter((function(e){return e!==t}))},l=function(e,t){return(a[e]||[]).reduce((function(e,n){return e&&!1!==n(t)}),!0)},c=function(e,t){s[e]&&(n&&l("deactivate",o(n,t)),n=s[e],l("activate",o(n,t)))},u=function(e,t){var r=s.indexOf(n)+e;l(e>0?"next":"prev",o(n,t))&&c(r,t)},d={off:i,on:function(e,t){return(a[e]||(a[e]=[])).push(t),i.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return s.indexOf(n);l("slide",o(s[e],t))&&c(e,t)},next:u.bind(null,1),prev:u.bind(null,-1),parent:r,slides:s,destroy:function(e){l("destroy",o(n,e)),a={}}};return(t||[]).forEach((function(e){e(d)})),n||c(0),d}},t=function(){return function(e){e.slides.forEach((function(e){e.addEventListener("keydown",(function(e){(/INPUT|TEXTAREA|SELECT/.test(e.target.nodeName)||"true"===e.target.contentEditable)&&e.stopPropagation()}))}))}};function n(e){e.parent.classList.add("bespoke-marp-parent"),e.slides.map(e=>e.classList.add("bespoke-marp-slide")),e.on("activate",t=>{e.slides.map(e=>e.classList.remove("bespoke-marp-active")),t.slide.classList.add("bespoke-marp-active")})}function r(e=2e3){return t=>{let n;function r(){n&&clearTimeout(n),n=setTimeout(()=>{t.parent.classList.add("bespoke-marp-inactive")},e),t.parent.classList.remove("bespoke-marp-inactive")}document.addEventListener("mousedown",r),document.addEventListener("mousemove",r),document.addEventListener("touchend",r),setTimeout(r,0)}}function s(e){window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("[data-marp-fitting]")?"":"hideable";t.setAttribute("data-bespoke-marp-load",e)}})}function a(e){let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],s=(r,s)=>{t=r,n=s,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=s;e.setAttribute("data-bespoke-marp-fragment",a?"active":"inactive"),t===r&&n===s?e.setAttribute("data-bespoke-marp-current-fragment","current"):e.removeAttribute("data-bespoke-marp-current-fragment")})}),e.fragmentIndex=s;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:s};e.fire("fragment",a)};e.on("next",()=>{if(r(1))return s(t,n+1),!1;const a=t+1;e.fragments[a]&&s(a,0)}),e.on("prev",()=>{if(r(-1))return s(t,n-1),!1;const a=t-1;e.fragments[a]&&s(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const s=e.fragments[t];if(s){const{length:e}=s;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}s(t,r)}),s(0,0)}var o,i=function(e,t){return e(t={exports:{}},t.exports),t.exports}((function(e){!function(){var t="undefined"!=typeof window&&void 0!==window.document?window.document:{},n=e.exports,r=function(){for(var e,n=[["requestFullscreen","exitFullscreen","fullscreenElement","fullscreenEnabled","fullscreenchange","fullscreenerror"],["webkitRequestFullscreen","webkitExitFullscreen","webkitFullscreenElement","webkitFullscreenEnabled","webkitfullscreenchange","webkitfullscreenerror"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitCurrentFullScreenElement","webkitCancelFullScreen","webkitfullscreenchange","webkitfullscreenerror"],["mozRequestFullScreen","mozCancelFullScreen","mozFullScreenElement","mozFullScreenEnabled","mozfullscreenchange","mozfullscreenerror"],["msRequestFullscreen","msExitFullscreen","msFullscreenElement","msFullscreenEnabled","MSFullscreenChange","MSFullscreenError"]],r=0,s=n.length,a={};r<s;r++)if((e=n[r])&&e[1]in t){for(r=0;r<e.length;r++)a[n[0][r]]=e[r];return a}return!1}(),s={change:r.fullscreenchange,error:r.fullscreenerror},a={request:function(e){return new Promise(function(n,s){var a=function(){this.off("change",a),n()}.bind(this);this.on("change",a),e=e||t.documentElement,Promise.resolve(e[r.requestFullscreen]()).catch(s)}.bind(this))},exit:function(){return new Promise(function(e,n){if(this.isFullscreen){var s=function(){this.off("change",s),e()}.bind(this);this.on("change",s),Promise.resolve(t[r.exitFullscreen]()).catch(n)}else e()}.bind(this))},toggle:function(e){return this.isFullscreen?this.exit():this.request(e)},onchange:function(e){this.on("change",e)},onerror:function(e){this.on("error",e)},on:function(e,n){var r=s[e];r&&t.addEventListener(r,n,!1)},off:function(e,n){var r=s[e];r&&t.removeEventListener(r,n,!1)},raw:r};r?(Object.defineProperties(a,{isFullscreen:{get:function(){return Boolean(t[r.fullscreenElement])}},element:{enumerable:!0,get:function(){return t[r.fullscreenElement]}},isEnabled:{enumerable:!0,get:function(){return Boolean(t[r.fullscreenEnabled])}}}),n?e.exports=a:window.screenfull=a):n?e.exports={isEnabled:!1}:window.screenfull={isEnabled:!1}}()}));i.isEnabled;function l(e){e.fullscreen=()=>{i.isEnabled&&i.toggle(document.body)},document.addEventListener("keydown",t=>{70!==t.which&&122!==t.which||t.altKey||t.ctrlKey||t.metaKey||!i.isEnabled||(e.fullscreen(),t.preventDefault())})}function c(e={}){const t=Object.assign({interval:200},e);return e=>{document.addEventListener("keydown",t=>{(32===t.which&&t.shiftKey||33===t.which||37===t.which||38===t.which)&&e.prev(),(32===t.which&&!t.shiftKey||34===t.which||39===t.which||40===t.which)&&e.next(),35===t.which&&e.slide(e.slides.length-1,{fragment:-1}),36===t.which&&e.slide(0)});let n,r,s=0;e.parent.addEventListener("wheel",a=>{let i=!1;const l=(e,t)=>{e&&(i=i||function(e,t){return function(e,t){const n=t===o.X?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]}(e,t)&&function(e,t){const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r}(getComputedStyle(e),t)}(e,t)),e&&e.parentElement&&l(e.parentElement,t)};if(0!==a.deltaX&&l(a.target,o.X),0!==a.deltaY&&l(a.target,o.Y),i)return;a.preventDefault(),r&&clearTimeout(r),r=setTimeout(()=>{n=0},t.interval);const c=Date.now()-s<t.interval,u=Math.sqrt(Math.pow(a.deltaX,2)+Math.pow(a.deltaY,2)),d=u<=n;if(n=u,c||d)return;let f;(a.deltaX>0||a.deltaY>0)&&(f="next"),(a.deltaX<0||a.deltaY<0)&&(f="prev"),f&&(e[f](),s=Date.now())})}}function u(e=".bespoke-marp-osc"){const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[data-bespoke-marp-osc=${JSON.stringify(e)}]`).forEach(n)};return i.isEnabled||n("fullscreen",e=>e.style.display="none"),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement)switch(t.target.dataset.bespokeMarpOsc){case"next":e.next();break;case"prev":e.prev();break;case"fullscreen":"function"==typeof e.fullscreen&&i.isEnabled&&e.fullscreen()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:s})=>{n("prev",e=>e.disabled=0===t&&0===s),n("next",n=>n.disabled=t===e.slides.length-1&&s===r.length-1)}),i.isEnabled&&i.onchange(()=>n("fullscreen",e=>e.classList.toggle("exit",i.isEnabled&&i.isFullscreen)))}}!function(e){e.X="X",e.Y="Y"}(o||(o={}));const d=".bespoke-progress-bar";function f(e){e.on("activate",t=>{document.querySelectorAll(d).forEach(n=>{n.style.flexBasis=`${100*t.index/(e.slides.length-1)}%`})})}const h=(e,{protocol:t,host:n,pathname:r,hash:s}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${s}`},m=e=>new URLSearchParams(location.search).get(e),g=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t};function p(e={}){const t=Object.assign({history:!0},e);return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},s=(t={fragment:!0})=>{((t,n)=>{const{fragments:r,slides:s}=e,a=Math.max(0,Math.min(t,s.length-1)),o=Math.max(0,Math.min(n||0,r[a].length-1));a===e.slide()&&o===e.fragmentIndex||e.slide(a,{fragment:o})})((g(location.hash.slice(1))||1)-1,t.fragment?g(m("f")||""):null)};e.on("fragment",({index:e,fragmentIndex:r})=>{if(n)return;const s=new URLSearchParams(location.search);0===r?s.delete("f"):s.set("f",r.toString()),((...e)=>t.history?history.pushState(...e):history.replaceState(...e))(null,document.title,h(s,Object.assign(Object.assign({},location),{hash:`#${e+1}`})))}),setTimeout(()=>{s(),window.addEventListener("hashchange",()=>r(()=>{s({fragment:!1});const e=new URLSearchParams(location.search);e.delete("f"),history.replaceState(null,document.title,h(e))})),window.addEventListener("popstate",()=>{n||r(()=>s())}),n=!1},0)}}var b=self.crypto||self.msCrypto,v=function(e){e=e||21;for(var t="",n=b.getRandomValues(new Uint8Array(e));0<e--;)t+="Uint8ArdomValuesObj012345679BCDEFGHIJKLMNPQRSTWXYZ_cfghkpqvwxyz-"[63&n[e]];return t};function w(e={}){const t=e.key||v(),n=`bespoke-marp-sync-${t}`,r=()=>{const e=localStorage.getItem(n);return e?JSON.parse(e):Object.create(null)},s=e=>{const t=r(),s=Object.assign(Object.assign({},t),e(t));return localStorage.setItem(n,JSON.stringify(s)),s};return s(e=>({reference:(e.reference||0)+1})),e=>{Object.defineProperty(e,"syncKey",{value:t,enumerable:!0}),setTimeout(()=>{e.on("fragment",e=>{s(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),r=JSON.parse(t.newValue);n.index===r.index&&n.fragmentIndex===r.fragmentIndex||e.slide(r.index,{fragment:r.fragmentIndex})}}),e.on("destroy",()=>{const{reference:e}=r();void 0===e||e<=1?localStorage.removeItem(n):s(()=>({reference:e-1}))})}}function E(e={}){const t=Object.assign({slope:Math.tan(-35*Math.PI/180),swipeThreshold:30},e);return e=>{let n;const r=e.parent,s=e=>{const t=r.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};r.addEventListener("touchstart",e=>{n=1===e.touches.length?s(e.touches[0]):void 0}),r.addEventListener("touchmove",e=>{if(n)if(1===e.touches.length){e.preventDefault();const t=s(e.touches[0]),r=t.x-n.x,a=t.y-n.y;n.delta=Math.sqrt(Math.pow(Math.abs(r),2)+Math.pow(Math.abs(a),2)),n.radian=Math.atan2(r,a)}else n=void 0}),r.addEventListener("touchend",r=>{if(n){if(n.delta&&n.delta>=t.swipeThreshold){let s=n.radian-t.slope;s=(s+Math.PI)%(2*Math.PI)-Math.PI,e[s<0?"next":"prev"](),r.stopPropagation()}n=void 0}})}}!function(o=document.getElementById("p")){const i=e.from(o,[t(),n,r(),s,p({history:!1}),c(),l,f,E(),u(),a,w({key:m("sync")||void 0})]);window.addEventListener("unload",()=>i.destroy())}()}();
+</script></body></html>
